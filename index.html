@@ -51,6 +51,9 @@
             --border-gray: #e0e0e0;
             --white: #ffffff;
             --accent-success: #2ecc71;
+            --gold: #D4AF37;
+            --gold-dark: #C9A227;
+            --gold-light: #E8D48A;
 
             --space-xs: 8px;
             --space-sm: 12px;
@@ -140,8 +143,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, var(--daisy-aqua) 0%, var(--daisy-mint) 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
             text-align: center;
             padding: 16px 24px;
             font-size: 1rem;
@@ -154,7 +157,7 @@
         }
 
         .sticky-cta:hover {
-            background: linear-gradient(135deg, var(--daisy-mint) 0%, var(--daisy-aqua) 100%);
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
         }
 
         .hero {
@@ -222,22 +225,22 @@
 
         .hero-cta {
             display: inline-block;
-            background: linear-gradient(135deg, var(--daisy-aqua) 0%, var(--daisy-mint) 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
             padding: 18px 48px;
             font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 8px 24px rgba(71, 163, 194, 0.3);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .hero-cta:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(71, 163, 194, 0.4);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
         }
 
         .hero-cta-secondary {
@@ -319,6 +322,70 @@
             font-weight: 600;
             color: var(--daisy-teal);
             font-size: 0.95rem;
+        }
+
+        /* Why Us Section */
+        .why-us-section {
+            background: var(--white);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .why-us-section h2 {
+            font-size: 2.2rem;
+            color: var(--daisy-teal);
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .why-us-subtitle {
+            text-align: center;
+            color: var(--dark-gray);
+            margin-bottom: var(--space-3xl);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-us-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            background: var(--light-bg);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .why-us-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .why-us-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .why-us-content h3 {
+            font-size: 1.1rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-xs);
+        }
+
+        .why-us-content p {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
         }
 
         .value-prop {
@@ -652,14 +719,14 @@
         }
 
         .cta-primary {
-            background: var(--daisy-mint);
-            color: var(--dark-gray);
-            box-shadow: 0 8px 24px rgba(109, 209, 202, 0.3);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
         }
 
         .cta-primary:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(109, 209, 202, 0.4);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
         }
 
         .cta-secondary {
@@ -850,7 +917,7 @@
     <nav>
         <div class="logo-section">
             <img src="public/images/daisy-logo.png" alt="Daisy MD Care Logo">
-            <span class="google-rating">⭐ 4.8 en Google</span>
+            <span class="google-rating">✨ 10,000+ Clientes Felices</span>
         </div>
         <div class="nav-right">
             <a href="tel:+1-877-877-3030" class="nav-phone"><i class="fas fa-phone"></i> (877) 877-3030</a>
@@ -889,6 +956,55 @@
             <div class="gallery-card">
                 <img src="public/images/patient-05.png" alt="Resultados de tratamiento avanzado de acné" loading="lazy">
                 <div class="gallery-label">Resultados Duraderos</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us-section">
+        <h2>Por Qué Más de 10,000 Pacientes Confían en Daisy MD Care</h2>
+        <p class="why-us-subtitle">Entendemos tu lucha. Después de probar miles de productos y tratamientos, mereces un cuidado que realmente funcione.</p>
+        <div class="why-us-grid">
+            <div class="why-us-item">
+                <div class="why-us-icon"><i class="fas fa-award"></i></div>
+                <div class="why-us-content">
+                    <h3>42+ Años de Experiencia</h3>
+                    <p>Cuatro décadas transformando pieles con métodos comprobados, no siguiendo modas.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon"><i class="fas fa-users"></i></div>
+                <div class="why-us-content">
+                    <h3>10,000+ Clientes Felices</h3>
+                    <p>Miles confían en nosotros en todo el Sur de California para resultados reales y duraderos.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon"><i class="fas fa-leaf"></i></div>
+                <div class="why-us-content">
+                    <h3>Sin Medicamentos Agresivos</h3>
+                    <p>Resultados clínicos sin pastillas riesgosas ni efectos secundarios fuertes. Seguro para tu salud.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon"><i class="fas fa-fingerprint"></i></div>
+                <div class="why-us-content">
+                    <h3>Tratamiento Personalizado</h3>
+                    <p>Nada de planes genéricos. Tu piel es única, y tu tratamiento también debe serlo.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon"><i class="fas fa-bolt"></i></div>
+                <div class="why-us-content">
+                    <h3>Citas el Mismo Día</h3>
+                    <p>No esperes semanas para empezar. Comienza a limpiar tu piel hoy mismo.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                <div class="why-us-content">
+                    <h3>Planes de Tratamiento Accesibles</h3>
+                    <p>Cuidado premium que cabe en tu presupuesto. La piel clara no debe vaciar tu bolsillo.</p>
+                </div>
             </div>
         </div>
     </section>
