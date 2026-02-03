@@ -18,22 +18,6 @@
     })(window,document,'script','dataLayer','GTM-KQK9GDDJ');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1623449681952157');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1623449681952157&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <style>
         * {
             margin: 0;
@@ -908,15 +892,6 @@
         }
     </style>
 
-    <!-- Google Ads Global Site Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17913311393"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17913311393');
-    </script>
-    <!-- End Google Ads Global Site Tag -->
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -1155,118 +1130,7 @@
     </footer>
 
     <script>
-        // Meta Pixel Custom Events Tracking
-        function trackPixelEvent(eventName, eventData = {}) {
-            if (typeof fbq !== 'undefined') {
-                fbq('trackCustom', eventName, eventData);
-            }
-            console.log('Pixel Event Tracked:', eventName, eventData);
-        }
-
-        // Track all CTA button clicks
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hero CTA button
-            const heroCtaButton = document.querySelector('.hero-cta');
-            if (heroCtaButton) {
-                heroCtaButton.addEventListener('click', function() {
-                    trackPixelEvent('BookConsultation', {
-                        section: 'hero',
-                        timestamp: new Date().toISOString()
-                    });
-                    fbq('track', 'ViewContent'); // Meta standard event
-                });
-            }
-
-            // Final CTA buttons
-            document.querySelectorAll('.cta-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const buttonType = this.classList.contains('cta-primary') ? 'primary' : 'secondary';
-                    const buttonText = this.textContent.trim();
-
-                    if (buttonText.includes('Book')) {
-                        trackPixelEvent('BookConsultation', {
-                            section: 'final-cta',
-                            buttonType: buttonType,
-                            timestamp: new Date().toISOString()
-                        });
-                        fbq('track', 'ViewContent');
-                    } else if (buttonText.includes('Call')) {
-                        trackPixelEvent('PhoneCall', {
-                            section: 'final-cta',
-                            timestamp: new Date().toISOString()
-                        });
-                        fbq('track', 'Contact');
-                    }
-                });
-            });
-
-            // Track section scrolls
-            const sections = document.querySelectorAll('section');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.dataset.tracked) {
-                        const sectionClass = entry.target.className;
-                        trackPixelEvent('SectionView', {
-                            section: sectionClass,
-                            timestamp: new Date().toISOString()
-                        });
-                        entry.target.dataset.tracked = 'true';
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            sections.forEach(section => observer.observe(section));
-
-            // Track FAQ interactions
-            document.querySelectorAll('.faq-question').forEach(question => {
-                question.addEventListener('click', function() {
-                    const questionText = this.querySelector('span').textContent.trim();
-                    trackPixelEvent('FAQExpand', {
-                        question: questionText,
-                        timestamp: new Date().toISOString()
-                    });
-                });
-            });
-
-            // Track gallery/before-after views
-            document.querySelectorAll('.gallery-card').forEach((card, index) => {
-                card.addEventListener('mouseenter', function() {
-                    trackPixelEvent('GalleryView', {
-                        imageIndex: index + 1,
-                        timestamp: new Date().toISOString()
-                    });
-                });
-            });
-
-            // Track time on page
-            let timeOnPage = 0;
-            setInterval(() => {
-                timeOnPage += 10;
-                if (timeOnPage % 60000 === 0) { // Every 1 minute
-                    trackPixelEvent('TimeOnPage', {
-                        seconds: timeOnPage / 1000,
-                        timestamp: new Date().toISOString()
-                    });
-                }
-            }, 10000);
-
-            // Track scroll depth
-            let maxScroll = 0;
-            window.addEventListener('scroll', function() {
-                const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-                if (scrollPercent > maxScroll) {
-                    maxScroll = scrollPercent;
-                    if (scrollPercent === 50 || scrollPercent === 75 || scrollPercent === 100) {
-                        trackPixelEvent('ScrollDepth', {
-                            depth: scrollPercent + '%',
-                            timestamp: new Date().toISOString()
-                        });
-                    }
-                }
-            });
-        });
-
-        // Original FAQ toggle function
+        // FAQ toggle function
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const isActive = answer.classList.contains('active');
