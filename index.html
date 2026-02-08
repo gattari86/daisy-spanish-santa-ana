@@ -323,7 +323,12 @@
             display: block;
         }
 
-        .gallery-card img.gallery-img-zoom {
+        .gallery-img-wrapper {
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .gallery-img-wrapper img {
             transform: scale(1.35);
         }
 
@@ -1396,11 +1401,11 @@
                 <div class="gallery-label">Acné Severo &rarr; Piel Clara</div>
             </div>
             <div class="gallery-card">
-                <img src="public/images/before-01.png" alt="Acné y enrojecimiento reducidos con tratamiento facial clínico" loading="lazy" class="gallery-img-zoom">
+                <div class="gallery-img-wrapper"><img src="public/images/before-01.png" alt="Acné y enrojecimiento reducidos con tratamiento facial clínico" loading="lazy"></div>
                 <div class="gallery-label">Inflamación &rarr; Tono Uniforme</div>
             </div>
             <div class="gallery-card">
-                <img src="public/images/before-02.png" alt="Acné hormonal eliminado con tratamiento facial profesional" loading="lazy" class="gallery-img-zoom">
+                <div class="gallery-img-wrapper"><img src="public/images/before-02.png" alt="Acné hormonal eliminado con tratamiento facial profesional" loading="lazy"></div>
                 <div class="gallery-label">Acné Hormonal &rarr; Piel Limpia</div>
             </div>
             <div class="gallery-card">
