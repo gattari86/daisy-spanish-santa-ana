@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tratamiento Clínico de Acné en Santa Ana CA | Daisy MD Care - Cuidado Profesional</title>
-    <meta name="description" content="Tratamiento facial experto en Santa Ana, California. Más de 40 años transformando pieles adultas. Resultados visibles, sin medicamentos agresivos. Se habla español. Consulta gratis.">
+    <meta name="description" content="Tratamiento facial experto en Santa Ana, California. Más de 40 años transformando pieles adultas. Resultados visibles en 2 semanas garantizados o le devolvemos su dinero. Se habla español. Consulta gratis.">
     <link rel="icon" href="public/Logo/Daisy Logo Transparent Background.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -17,6 +16,22 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KQK9GDDJ');</script>
     <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1623449681952157');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1623449681952157&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <style>
         * {
@@ -56,6 +71,7 @@
             background: var(--white);
         }
 
+        /* ============ NAV ============ */
         nav {
             background: var(--white);
             padding: var(--space-md) var(--space-xl);
@@ -79,19 +95,30 @@
             width: auto;
         }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: var(--space-lg);
-        }
-
         .google-rating {
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--daisy-teal);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .google-rating:hover {
+            color: var(--daisy-aqua);
+        }
+
+        .google-stars {
+            color: #ffc107;
+            letter-spacing: -1px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
         }
 
         .nav-phone {
@@ -120,7 +147,7 @@
             color: var(--daisy-teal);
         }
 
-        /* Sticky Mobile CTA */
+        /* ============ STICKY MOBILE CTA ============ */
         .sticky-cta {
             display: none;
             position: fixed;
@@ -144,13 +171,13 @@
             background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
         }
 
+        /* ============ HERO ============ */
         .hero {
             background-image:
-                linear-gradient(135deg, rgba(5, 31, 42, 0.65) 0%, rgba(14, 58, 71, 0.6) 50%, rgba(14, 58, 71, 0.7) 100%),
+                linear-gradient(135deg, rgba(5, 31, 42, 0.72) 0%, rgba(14, 58, 71, 0.68) 50%, rgba(14, 58, 71, 0.75) 100%),
                 url('public/images/hero-background.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: var(--white);
             padding: var(--space-4xl) var(--space-xl);
             text-align: center;
@@ -164,18 +191,6 @@
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(109, 209, 202, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(71, 163, 194, 0.12) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
         .hero-content {
             position: relative;
             z-index: 1;
@@ -187,17 +202,25 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: var(--space-lg);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .hero-subheading {
             font-size: 1.25rem;
             font-weight: 400;
             max-width: 700px;
-            margin-bottom: var(--space-2xl);
+            margin-bottom: var(--space-md);
             line-height: 1.7;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .hero-guarantee {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            margin-bottom: var(--space-2xl);
+            letter-spacing: 0.3px;
         }
 
         .hero-cta-group {
@@ -249,6 +272,7 @@
             margin-right: auto;
         }
 
+        /* ============ BEFORE/AFTER GALLERY ============ */
         .before-after-gallery {
             background: var(--light-bg);
             padding: var(--space-4xl) var(--space-xl);
@@ -308,7 +332,372 @@
             font-size: 0.95rem;
         }
 
-        /* Why Us Section */
+        /* ============ PROOF TIMELINE ============ */
+        .proof-timeline-section {
+            background: var(--white);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .proof-timeline-section h2 {
+            font-size: 2.2rem;
+            color: var(--daisy-teal);
+            text-align: center;
+            margin-bottom: var(--space-sm);
+        }
+
+        .proof-subtitle {
+            text-align: center;
+            color: var(--dark-gray);
+            margin-bottom: var(--space-3xl);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .proof-case-study {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .proof-image-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            margin-bottom: var(--space-xl);
+        }
+
+        .proof-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .proof-timeline-markers {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--space-xl);
+            position: relative;
+            padding: 0 var(--space-md);
+        }
+
+        .proof-timeline-markers::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(to right, #e74c3c, var(--gold), var(--accent-success));
+            z-index: 0;
+        }
+
+        .proof-marker {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .proof-marker-dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-xs);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--white);
+        }
+
+        .proof-marker:nth-child(1) .proof-marker-dot { background: #e74c3c; }
+        .proof-marker:nth-child(2) .proof-marker-dot { background: var(--gold); }
+        .proof-marker:nth-child(3) .proof-marker-dot { background: var(--accent-success); }
+
+        .proof-marker-label {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--daisy-teal);
+        }
+
+        .proof-marker-desc {
+            font-size: 0.8rem;
+            color: var(--dark-gray);
+            margin-top: 2px;
+        }
+
+        .proof-quote {
+            background: linear-gradient(135deg, rgba(14, 58, 71, 0.06) 0%, rgba(109, 209, 202, 0.06) 100%);
+            border-left: 4px solid var(--accent-success);
+            border-radius: 8px;
+            padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .proof-quote p {
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+        }
+
+        .proof-guarantee {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent-success);
+            margin-bottom: var(--space-xl);
+        }
+
+        .proof-guarantee i {
+            margin-right: 6px;
+        }
+
+        .proof-cta {
+            text-align: center;
+        }
+
+        .proof-cta a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .proof-cta a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ============ VIDEO TESTIMONIAL ============ */
+        .video-testimonial-section {
+            background: linear-gradient(135deg, var(--daisy-teal-dark) 0%, var(--daisy-teal) 100%);
+            padding: var(--space-3xl) var(--space-lg);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .video-testimonial-section h2 {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: var(--space-sm);
+        }
+
+        .video-testimonial-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .video-wrapper {
+            position: relative;
+            max-width: 480px;
+            margin: 0 auto var(--space-xl);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+            aspect-ratio: 1 / 1;
+            background: #000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.35);
+            cursor: pointer;
+            transition: background 0.3s;
+            z-index: 2;
+        }
+
+        .video-play-overlay:hover {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .video-play-overlay.hidden {
+            display: none;
+        }
+
+        .play-button-circle {
+            width: 72px;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-sm);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .video-play-overlay:hover .play-button-circle {
+            transform: scale(1.1);
+        }
+
+        .play-button-circle i {
+            font-size: 1.8rem;
+            color: var(--daisy-teal);
+            margin-left: 4px;
+        }
+
+        .play-label {
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .testimonial-quote-highlight {
+            max-width: 520px;
+            margin: 0 auto var(--space-xl);
+            font-size: 1.05rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.92);
+            position: relative;
+            padding: 0 var(--space-lg);
+        }
+
+        .testimonial-quote-highlight::before {
+            content: '\201C';
+            font-size: 3.5rem;
+            color: var(--gold);
+            position: absolute;
+            top: -20px;
+            left: 0;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-quote-name {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--gold-light);
+            display: block;
+            margin-top: var(--space-sm);
+            font-size: 0.9rem;
+        }
+
+        .video-cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .video-cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ============ FOUNDER ============ */
+        .founder-section {
+            background: var(--light-bg);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .founder-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .founder-image {
+            flex-shrink: 0;
+            width: 280px;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .founder-image-caption {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--dark-gray);
+            margin-top: var(--space-xs);
+            opacity: 0.7;
+        }
+
+        .founder-content {
+            flex: 1;
+        }
+
+        .founder-content h2 {
+            font-size: 2rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-lg);
+        }
+
+        .founder-quote {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--daisy-teal);
+            line-height: 1.7;
+            margin-bottom: var(--space-sm);
+            position: relative;
+            padding-left: var(--space-lg);
+            border-left: 3px solid var(--gold);
+        }
+
+        .founder-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-xl);
+            padding-left: var(--space-lg);
+        }
+
+        .founder-bio {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+        }
+
+        /* ============ WHY US ============ */
         .why-us-section {
             background: var(--white);
             padding: var(--space-4xl) var(--space-xl);
@@ -372,6 +761,7 @@
             line-height: 1.6;
         }
 
+        /* ============ VALUE PROP ============ */
         .value-prop {
             background: var(--white);
             padding: var(--space-4xl) var(--space-xl);
@@ -422,58 +812,9 @@
             line-height: 1.7;
         }
 
-        .results-section {
-            padding: var(--space-4xl) var(--space-xl);
-            background: var(--light-bg);
-        }
-
-        .results-section h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            color: var(--daisy-teal);
-            margin-bottom: var(--space-3xl);
-        }
-
-        .results-claim {
-            background: linear-gradient(135deg, rgba(14, 58, 71, 0.08) 0%, rgba(109, 209, 202, 0.08) 100%);
-            border-left: 4px solid var(--daisy-teal);
-            border-radius: 8px;
-            padding: var(--space-2xl);
-            max-width: 800px;
-            margin: 0 auto var(--space-2xl);
-        }
-
-        .results-claim h3 {
-            font-size: 1.5rem;
-            color: var(--daisy-teal);
-            margin-bottom: var(--space-md);
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            justify-content: center;
-        }
-
-        .results-icon {
-            font-size: 1.8rem;
-            color: var(--accent-success);
-        }
-
-        .results-claim p {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .highlight-two-weeks {
-            font-weight: 700;
-            color: var(--daisy-mint);
-            background: rgba(109, 209, 202, 0.15);
-            padding: 2px 8px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-
+        /* ============ TESTIMONIALS ============ */
         .testimonials-section {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-4xl) var(--space-xl);
         }
 
@@ -493,7 +834,7 @@
         }
 
         .testimonial-card {
-            background: var(--light-bg);
+            background: var(--white);
             padding: var(--space-2xl);
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -519,8 +860,42 @@
             color: var(--daisy-teal);
         }
 
+        /* ============ MID-PAGE CTA ============ */
+        .mid-cta {
+            text-align: center;
+            padding: var(--space-2xl) var(--space-xl);
+            background: var(--white);
+        }
+
+        .mid-cta a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
+            padding: 14px 36px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mid-cta a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
+        }
+
+        .mid-cta p {
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            margin-top: var(--space-sm);
+        }
+
+        /* ============ 3 STEPS ============ */
         .expertise-section {
-            background: var(--light-bg);
+            background: var(--white);
             padding: var(--space-4xl) var(--space-xl);
         }
 
@@ -540,7 +915,7 @@
         }
 
         .expertise-item {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-2xl);
             text-align: center;
             border-radius: 8px;
@@ -564,55 +939,7 @@
             line-height: 1.7;
         }
 
-        .process-section {
-            background: var(--white);
-            padding: var(--space-4xl) var(--space-xl);
-        }
-
-        .process-section h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            color: var(--daisy-teal);
-            margin-bottom: var(--space-3xl);
-        }
-
-        .process-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-2xl);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .process-step {
-            background: var(--light-bg);
-            padding: var(--space-2xl);
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-
-        .process-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: var(--daisy-teal);
-            color: var(--white);
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: var(--space-lg);
-        }
-
-        .process-step h4 {
-            font-size: 1.2rem;
-            color: var(--daisy-teal);
-            margin-bottom: var(--space-md);
-        }
-
+        /* ============ FAQ ============ */
         .faq-section {
             background: var(--light-bg);
             padding: var(--space-4xl) var(--space-xl);
@@ -664,6 +991,12 @@
             display: block;
         }
 
+        .faq-answer a {
+            color: var(--daisy-aqua);
+            font-weight: 600;
+        }
+
+        /* ============ FINAL CTA ============ */
         .final-cta-section {
             background: linear-gradient(135deg, var(--daisy-teal-dark) 0%, var(--daisy-teal) 100%);
             color: var(--white);
@@ -673,6 +1006,13 @@
 
         .final-cta-section h2 {
             font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .final-cta-guarantee {
+            font-size: 0.95rem;
+            color: var(--gold-light);
+            font-weight: 600;
             margin-bottom: var(--space-xl);
         }
 
@@ -724,6 +1064,7 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
+        /* ============ LOCATION / FOOTER ============ */
         .location-languages {
             background: var(--light-bg);
             padding: var(--space-2xl) var(--space-xl);
@@ -747,6 +1088,25 @@
             font-size: 0.9rem;
         }
 
+        /* ============ RESPONSIVE ============ */
+        @media (min-width: 769px) {
+            .video-testimonial-section {
+                padding: var(--space-4xl) var(--space-xl);
+            }
+
+            .video-testimonial-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .video-wrapper {
+                max-width: 420px;
+            }
+
+            .mobile-google-rating {
+                display: none !important;
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -759,19 +1119,50 @@
             .value-cards {
                 grid-template-columns: 1fr;
             }
+
+            .founder-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .founder-image {
+                width: 220px;
+            }
+
+            .founder-quote {
+                border-left: none;
+                border-top: 3px solid var(--gold);
+                padding-left: 0;
+                padding-top: var(--space-md);
+            }
+
+            .founder-name {
+                padding-left: 0;
+            }
         }
 
         @media (max-width: 768px) {
             nav {
-                padding: var(--space-md) var(--space-lg);
+                padding: var(--space-sm) var(--space-md);
+                flex-wrap: wrap;
+                gap: var(--space-xs);
             }
 
             .logo-section img {
-                height: 38px;
+                height: 34px;
             }
 
-            .google-rating {
+            .google-rating.desktop-only {
                 display: none;
+            }
+
+            .mobile-google-rating {
+                display: flex !important;
+                width: 100%;
+                justify-content: center;
+                padding-top: var(--space-xs);
+                border-top: 1px solid var(--border-gray);
+                order: 3;
             }
 
             .nav-phone {
@@ -789,12 +1180,16 @@
             .hero {
                 padding: var(--space-3xl) var(--space-lg);
                 min-height: auto;
-                background-image: none;
-                background-color: var(--daisy-teal);
+                background-image:
+                    linear-gradient(180deg, rgba(5, 31, 42, 0.82) 0%, rgba(14, 58, 71, 0.78) 100%),
+                    url('public/images/hero-background.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
             }
 
             .hero h1 {
-                font-size: 2.7rem;
+                font-size: 2rem;
             }
 
             .hero-subheading {
@@ -812,12 +1207,13 @@
 
             .before-after-gallery,
             .value-prop,
-            .results-section,
             .testimonials-section,
             .expertise-section,
-            .process-section,
             .faq-section,
-            .final-cta-section {
+            .final-cta-section,
+            .video-testimonial-section,
+            .proof-timeline-section,
+            .founder-section {
                 padding: var(--space-3xl) var(--space-lg);
             }
 
@@ -827,12 +1223,16 @@
 
             .gallery-title,
             .value-prop h2,
-            .results-section h2,
             .testimonials-section h2,
             .expertise-section h2,
-            .process-section h2,
             .faq-section h2,
-            .final-cta-section h2 {
+            .final-cta-section h2,
+            .video-testimonial-section h2,
+            .proof-timeline-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .founder-content h2 {
                 font-size: 1.6rem;
             }
 
@@ -843,26 +1243,62 @@
             .cta-button {
                 width: 100%;
             }
+
+            .proof-timeline-markers {
+                gap: var(--space-xs);
+            }
+
+            .proof-marker-dot {
+                width: 34px;
+                height: 34px;
+                font-size: 0.65rem;
+            }
+
+            .proof-marker-label {
+                font-size: 0.75rem;
+            }
+
+            .proof-marker-desc {
+                font-size: 0.75rem;
+            }
+
+            .mid-cta {
+                padding: var(--space-2xl) var(--space-lg);
+            }
+
+            .mid-cta a {
+                width: 100%;
+                display: block;
+            }
+
+            .why-us-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 1.75rem;
                 margin-bottom: var(--space-md);
             }
 
             .hero-subheading {
                 font-size: 0.95rem;
-                margin-bottom: var(--space-lg);
+                margin-bottom: var(--space-sm);
+            }
+
+            .hero-guarantee {
+                font-size: 0.85rem;
             }
 
             .gallery-title,
             .value-prop h2,
-            .results-section h2,
             .testimonials-section h2,
             .expertise-section h2,
-            .process-section h2,
-            .faq-section h2 {
+            .faq-section h2,
+            .video-testimonial-section h2,
+            .proof-timeline-section h2 {
                 font-size: 1.4rem;
             }
 
@@ -871,23 +1307,37 @@
                 font-size: 0.95rem;
             }
 
-            .results-claim {
-                padding: var(--space-lg);
+            .video-testimonial-section h2 {
+                font-size: 1.5rem;
             }
 
-            .results-claim h3 {
-                font-size: 1.2rem;
-                flex-direction: column;
-                text-align: center;
+            .video-wrapper {
+                border-radius: 12px;
             }
 
-            .results-claim p {
+            .play-button-circle {
+                width: 64px;
+                height: 64px;
+            }
+
+            .play-button-circle i {
+                font-size: 1.5rem;
+            }
+
+            .testimonial-quote-highlight {
                 font-size: 0.95rem;
+                padding: 0 var(--space-md);
             }
 
-            .highlight-two-weeks {
+            .video-cta-button,
+            .proof-cta a {
+                width: 100%;
+                max-width: 100%;
                 display: block;
-                margin: var(--space-xs) 0;
+            }
+
+            .founder-image {
+                width: 180px;
             }
         }
     </style>
@@ -902,49 +1352,146 @@
     <nav>
         <div class="logo-section">
             <img src="public/images/daisy-logo.png" alt="Daisy MD Care Logo">
-            <span class="google-rating">✨ 10,000+ Clientes Felices</span>
+            <a href="https://www.google.com/search?q=Daisy+MD+Care+reviews" target="_blank" rel="noopener" class="google-rating desktop-only">
+                <span class="google-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 en Google (150+ Reseñas)
+            </a>
         </div>
         <div class="nav-right">
             <a href="tel:+1-877-877-3030" class="nav-phone"><i class="fas fa-phone"></i> (877) 877-3030</a>
             <a href="#contact">Contacto</a>
         </div>
+        <a href="https://www.google.com/search?q=Daisy+MD+Care+reviews" target="_blank" rel="noopener" class="google-rating mobile-google-rating" style="display:none;">
+            <span class="google-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 en Google (150+ Reseñas)
+        </a>
     </nav>
 
+    <!-- ============ HERO ============ -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Finalmente Aclara Tu Acné y Manchas Oscuras - Resultados Visibles en 2 Semanas</h1>
-            <p class="hero-subheading">Tratamiento profesional para limpiar su piel y eliminar manchas oscuras. Mejora garantizada en 2 semanas.</p>
-            <p class="hero-note" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 24px;">¡Citas el Mismo Día Disponibles! | Se habla español.</p>
+            <h1>Finalmente Aclara Tu Acné y Manchas Oscuras</h1>
+            <p class="hero-subheading">Tratamiento profesional para limpiar su piel y eliminar manchas oscuras. Resultados que se ven.</p>
+            <p class="hero-guarantee"><i class="fas fa-shield-halved"></i> Resultados visibles en 2 semanas garantizados o le devolvemos su dinero.</p>
 
             <div class="hero-cta-group">
                 <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; width: 100%;">
                     <a href="https://www.daisymdcare.com/booking-santa-ana?loc=santa-ana" class="hero-cta">Reservar Consulta Gratis</a>
-                    <a href="tel:+1-877-877-3030" class="hero-cta hero-cta-secondary"><i class="fas fa-phone"></i> Llame ahora: (877) 877-3030</a>
+                    <a href="tel:+1-877-877-3030" class="hero-cta hero-cta-secondary"><i class="fas fa-phone"></i> Llame: (877) 877-3030</a>
                 </div>
-                <p class="hero-note">¿Luchando con acné persistente o marcas en la piel? En su consulta gratuita, evaluaremos su pigmentación y brotes para diseñar un plan que limpie su rostro rápido, sin pastillas fuertes.</p>
+                <p class="hero-note">Lugares limitados disponibles. Se habla español.</p>
             </div>
         </div>
     </section>
 
+    <!-- ============ BEFORE/AFTER GALLERY ============ -->
     <section class="before-after-gallery">
         <h2 class="gallery-title">Pacientes Reales, Resultados Claros</h2>
-        <p class="gallery-subtitle">Vea la transformación cuando el tratamiento experto se encuentra con cuidado personalizado.</p>
+        <p class="gallery-subtitle">Vea la transformación cuando el tratamiento experto se combina con cuidado personalizado.</p>
         <div class="gallery-grid">
             <div class="gallery-card">
-                <img src="public/images/before-01.png" alt="Tratamiento de acné - resultados antes y después" loading="lazy">
-                <div class="gallery-label">Piel Libre de Imperfecciones</div>
+                <img src="public/images/patient-05.png" alt="Acné severo eliminado con tratamiento profesional" loading="lazy">
+                <div class="gallery-label">Acné Severo &rarr; Piel Clara</div>
             </div>
             <div class="gallery-card">
-                <img src="public/images/before-02.png" alt="Resultados profesionales de tratamiento facial" loading="lazy">
-                <div class="gallery-label">Textura y Tono Mejorado</div>
+                <img src="public/images/before-01.png" alt="Acné y enrojecimiento reducidos con tratamiento facial clínico" loading="lazy">
+                <div class="gallery-label">Inflamación &rarr; Tono Uniforme</div>
             </div>
             <div class="gallery-card">
-                <img src="public/images/patient-05.png" alt="Resultados de tratamiento avanzado de acné" loading="lazy">
-                <div class="gallery-label">Resultados Duraderos</div>
+                <img src="public/images/before-02.png" alt="Manchas oscuras y cicatrices de acné desvanecidas después del tratamiento" loading="lazy">
+                <div class="gallery-label">Manchas Oscuras &rarr; Tez Suave</div>
             </div>
         </div>
     </section>
 
+    <!-- ============ PROOF TIMELINE (Case Study) ============ -->
+    <section class="proof-timeline-section">
+        <h2>Progreso Real en 2 Semanas, Documentado</h2>
+        <p class="proof-subtitle">Desde la primera visita hasta la piel clara. El recorrido real de una paciente con Daisy MD Care.</p>
+
+        <div class="proof-case-study">
+            <div class="proof-image-wrapper">
+                <img src="public/images/after-6months.jpg" alt="Transformación de acné de paciente - antes y después de 6 meses de tratamiento en Daisy MD Care" loading="lazy">
+            </div>
+
+            <div class="proof-timeline-markers">
+                <div class="proof-marker">
+                    <div class="proof-marker-dot">Día 1</div>
+                    <div class="proof-marker-label">Primera Visita</div>
+                    <div class="proof-marker-desc">Evaluación + plan de tratamiento</div>
+                </div>
+                <div class="proof-marker">
+                    <div class="proof-marker-dot">Sem 2</div>
+                    <div class="proof-marker-label">Cambio Visible</div>
+                    <div class="proof-marker-desc">Inflamación reducida</div>
+                </div>
+                <div class="proof-marker">
+                    <div class="proof-marker-dot">Mes 6</div>
+                    <div class="proof-marker-label">Piel Clara</div>
+                    <div class="proof-marker-desc">Transformación completa</div>
+                </div>
+            </div>
+
+            <div class="proof-quote">
+                <p>"Llegué con acné severo cubriendo mi rostro. Para la segunda semana, el enrojecimiento ya estaba bajando. Para el sexto mes, la gente no podía creer que era la misma persona."</p>
+            </div>
+
+            <div class="proof-guarantee">
+                <i class="fas fa-check-circle"></i> Resultados visibles en 2 semanas garantizados o le devolvemos su dinero.
+            </div>
+
+            <div class="proof-cta">
+                <a href="https://www.daisymdcare.com/booking-santa-ana?loc=santa-ana">Vea Lo Que Es Posible Para Usted</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIAL ============ -->
+    <section class="video-testimonial-section">
+        <h2>Escuche la Historia de una Paciente Real</h2>
+        <p class="video-testimonial-subtitle">Ella probó de todo. Luego encontró Daisy MD Care.</p>
+
+        <div class="video-wrapper">
+            <video
+                id="testimonialVideo"
+                poster="public/video/testimonial-poster.jpg"
+                preload="metadata"
+                playsinline
+                webkit-playsinline
+            >
+                <source src="public/video/patient-testimonial.mp4" type="video/mp4">
+            </video>
+            <div class="video-play-overlay" id="videoOverlay" onclick="playTestimonial()">
+                <div class="play-button-circle">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="play-label">Vea Su Historia</span>
+            </div>
+        </div>
+
+        <div class="testimonial-quote-highlight">
+            Mi autoestima se fue por las nubes. Estoy sonriendo, recibiendo cumplidos por todas partes... hasta mi matrimonio ha mejorado increíblemente.
+            <span class="testimonial-quote-name">- Paciente Real de Daisy MD Care</span>
+        </div>
+
+        <a href="https://www.daisymdcare.com/booking-santa-ana?loc=santa-ana" class="video-cta-button">Comience Su Transformación</a>
+    </section>
+
+    <!-- ============ FOUNDER ============ -->
+    <section class="founder-section">
+        <div class="founder-container">
+            <div class="founder-image">
+                <img src="public/images/daisy-founder.jpg" alt="Daisy, Fundadora de Daisy MD Care, realizando un tratamiento facial en 1979" loading="lazy">
+                <p class="founder-image-caption">Daisy, circa 1979</p>
+            </div>
+            <div class="founder-content">
+                <h2>Conozca a la Experta Detrás de Sus Resultados</h2>
+                <p class="founder-quote">"Creo que todas las personas merecen sentirse cómodas y seguras con su piel."</p>
+                <p class="founder-name">— Daisy, Fundadora</p>
+                <p class="founder-bio">Daisy MD Care es una clínica especializada en cuidado de la piel enfocada exclusivamente en piel problemática, con experiencia particular en acné y cicatrices de acné. Fundada en 1979, nuestro enfoque combina tratamientos de grado médico con planes de cuidado personalizados para entregar resultados que han transformado miles de vidas. No paramos hasta que su piel esté clara.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY US ============ -->
     <section class="why-us-section">
         <h2>Por Qué Más de 10,000 Pacientes Confían en Daisy MD Care</h2>
         <p class="why-us-subtitle">Entendemos tu lucha. Después de probar miles de productos y tratamientos, mereces un cuidado que realmente funcione.</p>
@@ -952,8 +1499,8 @@
             <div class="why-us-item">
                 <div class="why-us-icon"><i class="fas fa-award"></i></div>
                 <div class="why-us-content">
-                    <h3>42+ Años de Experiencia</h3>
-                    <p>Cuatro décadas transformando pieles con métodos comprobados, no siguiendo modas.</p>
+                    <h3>Fundada en 1979</h3>
+                    <p>Más de cuatro décadas transformando pieles con métodos comprobados, no siguiendo modas.</p>
                 </div>
             </div>
             <div class="why-us-item">
@@ -978,10 +1525,10 @@
                 </div>
             </div>
             <div class="why-us-item">
-                <div class="why-us-icon"><i class="fas fa-bolt"></i></div>
+                <div class="why-us-icon"><i class="fas fa-clock"></i></div>
                 <div class="why-us-content">
-                    <h3>Citas el Mismo Día</h3>
-                    <p>No esperes semanas para empezar. Comienza a limpiar tu piel hoy mismo.</p>
+                    <h3>Lugares Limitados Disponibles</h3>
+                    <p>Mantenemos las citas limitadas para que cada paciente reciba atención personalizada.</p>
                 </div>
             </div>
             <div class="why-us-item">
@@ -994,8 +1541,9 @@
         </div>
     </section>
 
+    <!-- ============ VALUE PROP ============ -->
     <section class="value-prop">
-        <h2>Más que solo Acné: Adiós a las Manchas Oscuras</h2>
+        <h2>Más Que Solo Acné: Adiós a las Manchas Oscuras</h2>
         <p class="gallery-subtitle" style="margin-bottom: var(--space-3xl);">Un tratamiento completo que ataca las espinillas y restaura el tono de su piel.</p>
         <div class="value-cards">
             <div class="value-card">
@@ -1006,7 +1554,7 @@
             <div class="value-card">
                 <div class="value-icon"><i class="fas fa-droplet"></i></div>
                 <h3>Reducción de Pigmentación</h3>
-                <p>Tratamientos especializados para desvanecer las "manchas" y cicatrices que el acné ha dejado atrás.</p>
+                <p>Tratamientos especializados para desvanecer las manchas y cicatrices que el acné ha dejado atrás.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fas fa-shield-heart"></i></div>
@@ -1016,45 +1564,42 @@
         </div>
     </section>
 
-    <section class="results-section">
-        <h2>Resultados en 2 Semanas</h2>
-        <div class="results-claim">
-            <h3><i class="fas fa-check-circle results-icon"></i> "Resultados en <span class="highlight-two-weeks">2 Semanas</span>" no es solo un eslogan</h3>
-            <p>Gracias a nuestros 42 años de experiencia, sabemos exactamente cómo calmar la inflamación y aclarar la piel rápidamente.<br><br><strong>Expertos Locales en Santa Ana • Más de 4 Décadas de Experiencia</strong></p>
-        </div>
-    </section>
-
+    <!-- ============ TESTIMONIALS ============ -->
     <section class="testimonials-section">
-        <h2>Lo que dicen nuestros pacientes</h2>
+        <h2>Lo Que Dicen Nuestros Pacientes</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p class="testimonial-text">"¡Por fin encontré un tratamiento que realmente funciona! El equipo de Daisy MD Care es profesional y experto. Mi piel nunca se ha visto mejor."</p>
-                <p class="testimonial-author">- Maria G., Downey, CA</p>
-                <p style="font-size: 0.75rem; color: #718096; margin-top: 8px; font-style: italic;">(Traducido del inglés original)</p>
+                <p class="testimonial-author">- Maria G., Santa Ana, CA</p>
             </div>
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p class="testimonial-text">"Lo he probado todo, pero nada funcionó hasta que vine a Daisy MD Care. El enfoque personalizado y la experiencia real marcaron toda la diferencia."</p>
                 <p class="testimonial-author">- James R., Los Angeles, CA</p>
-                <p style="font-size: 0.75rem; color: #718096; margin-top: 8px; font-style: italic;">(Traducido del inglés original)</p>
             </div>
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p class="testimonial-text">"Realmente escuchan y entienden por lo que estás pasando. Los resultados son increíbles y el personal es muy acogedor."</p>
-                <p class="testimonial-author">- Sofia L., Downey, CA</p>
-                <p style="font-size: 0.75rem; color: #718096; margin-top: 8px; font-style: italic;">(Traducido del inglés original)</p>
+                <p class="testimonial-author">- Sofia L., Orange County, CA</p>
             </div>
         </div>
     </section>
 
+    <!-- ============ MID-PAGE CTA ============ -->
+    <div class="mid-cta">
+        <a href="https://www.daisymdcare.com/booking-santa-ana?loc=santa-ana">Reserve Su Consulta Gratis</a>
+        <p>Lugares limitados disponibles. Se habla español.</p>
+    </div>
+
+    <!-- ============ 3 STEPS ============ -->
     <section class="expertise-section">
-        <h2>Recupere su Confianza en 3 Pasos</h2>
+        <h2>Recupere Su Confianza en 3 Pasos</h2>
         <div class="expertise-content">
             <div class="expertise-item">
                 <div class="expertise-icon"><i class="fas fa-calendar-check"></i></div>
-                <h3>Consulta Gratis (Hoy Mismo)</h3>
-                <p>Aproveche nuestras citas el mismo día. Analizamos sus manchas y nivel de acné sin costo.</p>
+                <h3>Consulta Gratis</h3>
+                <p>Lugares limitados cada semana. Analizamos sus manchas y nivel de acné sin costo.</p>
             </div>
             <div class="expertise-item">
                 <div class="expertise-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
@@ -1064,78 +1609,233 @@
             <div class="expertise-item">
                 <div class="expertise-icon"><i class="fas fa-bolt"></i></div>
                 <h3>Resultados Rápidos</h3>
-                <p>Note una piel más clara y un tono más parejo en tan solo 2 semanas.</p>
+                <p>Resultados visibles en 2 semanas garantizados o le devolvemos su dinero. No paramos hasta que su piel esté clara.</p>
             </div>
         </div>
     </section>
 
-
+    <!-- ============ FAQ ============ -->
     <section class="faq-section">
         <h2>Preguntas Frecuentes</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>¿Realmente pueden ayudar con las manchas oscuras?</span> <span>+</span>
+                    <span>¿Cuánto cuesta el tratamiento?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Sí. El anuncio que vio menciona "Solución a Manchas" porque es una de nuestras especialidades. Usamos tratamientos tópicos avanzados para reducir la pigmentación.</p>
+                    <p>El costo del tratamiento varía según la condición de su piel y su plan personalizado. Su primera consulta es completamente gratis, y le daremos un desglose claro de costos antes de que se comprometa a nada. Ofrecemos planes de tratamiento accesibles diseñados para caber en su presupuesto.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>¿Puedo ir hoy mismo?</span> <span>+</span>
+                    <span>¿Cuántas sesiones voy a necesitar?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Sí, ofrecemos citas el mismo día en los días que estamos abiertos:<br><br>
-                    <strong>Lunes:</strong> 11:00 AM - 8:00 PM<br><br>
-                    Llámenos o reserve en línea para asegurar su espacio.</p>
+                    <p>La mayoría de los pacientes ven mejoras visibles en 2 semanas. El número total de sesiones depende de la condición de su piel. Durante su consulta gratuita, le daremos un cronograma estimado de tratamiento para que sepa qué esperar.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>¿Usan medicamentos fuertes?</span> <span>+</span>
+                    <span>¿El tratamiento es doloroso?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>No. Nuestra filosofía es "Sin Medicinas Fuertes". Logramos resultados con tratamientos clínicos directos en la piel, protegiendo su salud general.</p>
+                    <p>Nuestros tratamientos están diseñados para ser cómodos. Puede sentir sensaciones leves durante las extracciones, pero nuestro equipo experimentado trabaja cuidadosamente para minimizar cualquier molestia. La mayoría de los pacientes describen la experiencia como relajante.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>¿Dónde están ubicados?</span> <span>+</span>
+                    <span>¿Es seguro para piel sensible?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Estamos en el corazón de Santa Ana: 2020 N. Broadway Blvd, Suite 100, Santa Ana, CA 92706.</p>
+                    <p>Sí. Cada plan de tratamiento está personalizado para su tipo de piel, incluyendo piel sensible. No usamos medicamentos orales agresivos y nuestros tratamientos tópicos están diseñados específicamente para usted. La seguridad de su piel es nuestra prioridad.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Aceptan seguro médico?</span> <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Somos una clínica especializada en cuidado de la piel y no facturamos directamente al seguro. Sin embargo, nuestros planes de tratamiento tienen precios competitivos y trabajamos con usted para encontrar un plan que se ajuste a su presupuesto. Muchos pacientes encuentran nuestro cuidado más económico que los copagos de visitas repetidas al dermatólogo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Qué productos necesitaré usar en casa?</span> <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Su plan de tratamiento puede incluir productos recomendados para usar en casa y apoyar sus resultados entre visitas. Estos están adaptados a las necesidades específicas de su piel y le explicaremos exactamente qué hace cada producto y por qué es parte de su plan.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Qué debo esperar en mi primera visita?</span> <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Su primera visita es una consulta gratuita donde evaluamos su piel, discutimos sus preocupaciones y creamos un plan de tratamiento personalizado. No hay presión ni obligación. Se irá con una comprensión clara de lo que podemos hacer por su piel.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Qué pasa si no puedo ir un lunes?</span> <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Nuestra ubicación en Santa Ana está abierta los lunes de 11:00 AM a 8:00 PM. Si los lunes no funcionan para su horario, tenemos múltiples ubicaciones en todo el Sur de California con diferentes disponibilidades. <a href="https://www.daisymdcare.com/locations" target="_blank">Vea todas nuestras ubicaciones y horarios aquí.</a></p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ============ LOCATION ============ -->
     <section class="location-languages">
         <p>2020 N. Broadway Blvd, Suite 100, Santa Ana, CA 92706 | Se habla español</p>
     </section>
 
+    <!-- ============ FINAL CTA ============ -->
     <section class="final-cta-section" id="contact">
-        <h2>Limpia tu piel rápido.</h2>
+        <h2>No paramos hasta que su piel esté clara.</h2>
+        <p class="final-cta-guarantee"><i class="fas fa-shield-halved"></i> Resultados visibles en 2 semanas garantizados o le devolvemos su dinero.</p>
         <p>No deje que el acné o las manchas le quiten un día más de confianza.</p>
         <div class="cta-buttons">
             <a href="https://www.daisymdcare.com/booking-santa-ana?loc=santa-ana" class="cta-button cta-primary">Reservar Mi Consulta Gratis Ahora</a>
-            <a href="tel:+1-877-877-3030" class="cta-button cta-secondary"><i class="fas fa-phone"></i> Llámanos: (877) 877-3030</a>
+            <a href="tel:+1-877-877-3030" class="cta-button cta-secondary"><i class="fas fa-phone"></i> Llámenos: (877) 877-3030</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Daisy MD Care. Tratamiento de Acné y Manchas en Santa Ana.</p>
+        <p>&copy; 2026 Daisy MD Care. Tratamiento de Acné y Manchas en Santa Ana.</p>
         <p style="margin-top: 12px;">2020 N. Broadway Blvd, Suite 100, Santa Ana, CA 92706 | Se habla español</p>
         <p style="margin-top: 12px;">Visite nuestro sitio web: <a href="https://www.daisymdcare.com" style="color: var(--daisy-mint); text-decoration: none;">www.daisymdcare.com</a></p>
     </footer>
 
     <script>
+        // Meta Pixel Custom Events Tracking
+        function trackPixelEvent(eventName, eventData) {
+            eventData = eventData || {};
+            if (typeof fbq !== 'undefined') {
+                fbq('trackCustom', eventName, eventData);
+            }
+        }
+
+        // Track all CTA button clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero CTA button
+            var heroCtaButton = document.querySelector('.hero-cta');
+            if (heroCtaButton) {
+                heroCtaButton.addEventListener('click', function() {
+                    trackPixelEvent('BookConsultation', { section: 'hero' });
+                    if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+                });
+            }
+
+            // Final CTA buttons
+            document.querySelectorAll('.cta-button').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var buttonType = this.classList.contains('cta-primary') ? 'primary' : 'secondary';
+                    var buttonText = this.textContent.trim();
+                    if (buttonText.includes('Reservar')) {
+                        trackPixelEvent('BookConsultation', { section: 'final-cta', buttonType: buttonType });
+                        if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+                    } else if (buttonText.includes('Llám')) {
+                        trackPixelEvent('PhoneCall', { section: 'final-cta' });
+                        if (typeof fbq !== 'undefined') fbq('track', 'Contact');
+                    }
+                });
+            });
+
+            // Video CTA button
+            var videoCta = document.querySelector('.video-cta-button');
+            if (videoCta) {
+                videoCta.addEventListener('click', function() {
+                    trackPixelEvent('BookConsultation', { section: 'video-testimonial' });
+                    if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+                });
+            }
+
+            // Proof CTA button
+            var proofCta = document.querySelector('.proof-cta a');
+            if (proofCta) {
+                proofCta.addEventListener('click', function() {
+                    trackPixelEvent('BookConsultation', { section: 'proof-timeline' });
+                    if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+                });
+            }
+
+            // Mid-page CTA
+            var midCta = document.querySelector('.mid-cta a');
+            if (midCta) {
+                midCta.addEventListener('click', function() {
+                    trackPixelEvent('BookConsultation', { section: 'mid-page' });
+                    if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+                });
+            }
+
+            // Track section scrolls
+            var sections = document.querySelectorAll('section');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !entry.target.dataset.tracked) {
+                        trackPixelEvent('SectionView', { section: entry.target.className });
+                        entry.target.dataset.tracked = 'true';
+                    }
+                });
+            }, { threshold: 0.3 });
+            sections.forEach(function(section) { observer.observe(section); });
+
+            // Track FAQ interactions
+            document.querySelectorAll('.faq-question').forEach(function(question) {
+                question.addEventListener('click', function() {
+                    trackPixelEvent('FAQExpand', { question: this.querySelector('span').textContent.trim() });
+                });
+            });
+
+            // Track scroll depth
+            var maxScroll = 0;
+            window.addEventListener('scroll', function() {
+                var scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    if (scrollPercent === 50 || scrollPercent === 75 || scrollPercent === 100) {
+                        trackPixelEvent('ScrollDepth', { depth: scrollPercent + '%' });
+                    }
+                }
+            });
+        });
+
+        // Video Testimonial Play/Pause
+        function playTestimonial() {
+            var video = document.getElementById('testimonialVideo');
+            var overlay = document.getElementById('videoOverlay');
+            video.play();
+            overlay.classList.add('hidden');
+            trackPixelEvent('VideoTestimonialPlay', { section: 'video-testimonial' });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('testimonialVideo');
+            var overlay = document.getElementById('videoOverlay');
+            if (video && overlay) {
+                video.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        overlay.classList.add('hidden');
+                    } else {
+                        video.pause();
+                        overlay.classList.remove('hidden');
+                    }
+                });
+                video.addEventListener('ended', function() {
+                    overlay.classList.remove('hidden');
+                    trackPixelEvent('VideoTestimonialComplete', { section: 'video-testimonial' });
+                });
+            }
+        });
+
         // FAQ toggle function
         function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const isActive = answer.classList.contains('active');
+            var answer = element.nextElementSibling;
+            var isActive = answer.classList.contains('active');
 
-            document.querySelectorAll('.faq-answer').forEach(item => {
+            document.querySelectorAll('.faq-answer').forEach(function(item) {
                 item.classList.remove('active');
                 item.parentElement.querySelector('.faq-question span:last-child').textContent = '+';
             });
