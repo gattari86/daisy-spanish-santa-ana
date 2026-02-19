@@ -33,6 +33,16 @@
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1623449681952157&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17913311393"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17913311393');
+    </script>
+    <!-- End Google Ads Conversion Tracking -->
+
     <style>
         * {
             margin: 0;
@@ -1858,6 +1868,23 @@
                 element.querySelector('span:last-child').textContent = '-';
             }
         }
+    </script>
+
+    <!-- Google Ads Phone Click Conversion Tracking -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-17913311393/9S9XCJKkyPsbEKHh3d1C',
+                            'value': 50.0,
+                            'currency': 'USD'
+                        });
+                    }
+                });
+            });
+        });
     </script>
 
     <!-- Sticky Mobile CTA -->
